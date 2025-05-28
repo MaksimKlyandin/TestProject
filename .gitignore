@@ -1,0 +1,30 @@
+# my own notes
+notes.txt
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Caches
+.pytest_cache/
+.cache/
+
+# Virtual environment
+env/
+venv/
+
+# Editor & IDE files
+.vscode/
+.idea/
+
+# Dependency files
+*.egg-info/
+dist/
+build/
+
+# Logs
+*.log
+
+# OS-specific
+.DS_Store
+Thumbs.db
