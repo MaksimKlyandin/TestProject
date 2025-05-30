@@ -1,6 +1,4 @@
 from pages.main_page import MainPage
-import pytest, time
-from selenium import webdriver
 from selenium.webdriver.common.by import By
 
 def go_to_login_page(browser):
