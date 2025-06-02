@@ -6,7 +6,7 @@ class ProductPage(BasePage):
     def add_to_basket(self):
         button = self.browser.find_element(*ProductPageLocators.ADD_TO_BASKET_BUTTON)
         button.click()
-        time.sleep(2) #ожидание, чтобы успеть прочитать алерт 
+        time.sleep(1) #ожидание, чтобы успеть прочитать алерт 
 
     def should_be_add_to_basket_button(self):
         assert self.is_element_present(*ProductPageLocators.ADD_TO_BASKET_BUTTON), "Add to basket button is not presented" 
@@ -14,13 +14,11 @@ class ProductPage(BasePage):
     def product_name_should_be_in_success_message(self):
         product_name = self.browser.find_element(*ProductPageLocators.PRODUCT_NAME).text
         success_message = self.browser.find_element(*ProductPageLocators.SUCCESS_MESSAGE_PRODUCT_NAME).text
-        print(success_message)
         assert product_name == success_message, "Product name is not in success message"
 
     def product_price_should_be_in_success_message(self):
         product_price = self.browser.find_element(*ProductPageLocators.PRODUCT_PRICE).text
         success_message = self.browser.find_element(*ProductPageLocators.SUCCESS_MESSAGE_PRODUCT_PRICE).text
-        print(success_message)
         assert product_price == success_message, "Product price is not in success message"
 
 
