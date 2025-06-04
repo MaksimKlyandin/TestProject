@@ -2,6 +2,8 @@ from .pages.product_page import ProductPage
 from .pages.basket_page import BasketPage
 from .pages.login_page import LoginPage
 import pytest
+# В заданиях не было сказано, чтобы мы убирали параметризацию с этого теста. Речь шла только о тесте test_guest_can_add_product_to_basket
+# Поэтому я хз как было лучше сделать) я оставил
 
 @pytest.mark.parametrize('link', ["http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo=offer0",
                                   "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo=offer1",
