@@ -1,12 +1,9 @@
 import pytest
 from selenium import webdriver
-from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
-
-
+from faker import Faker
 
 default_lang = "ru"
-
 def pytest_addoption(parser):
     parser.addoption('--language', action='store', default="None",
                  help="Choose language: ru or es")
@@ -21,3 +18,7 @@ def browser(request):
     yield browser
     print("\nquit browser..")
     browser.quit()
+
+@pytest.fixture(scope="function")
+def faker():
+    return Faker()
